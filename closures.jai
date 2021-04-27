@@ -14,13 +14,8 @@ main :: () {
 
 */
 
-func_taking_a_callback :: (elems: []int, func: #type (int, user_data: *void), user_data: *void) {
-    for elems
-        if it % 2 == 0
-            func(it, user_data);
-}
-
 main :: () {
+    // What it would "desugar" into after macro expansion:
     Closure_Context :: struct {
         seen_the_number_six := false;
         all_values: [..]int;
@@ -37,6 +32,12 @@ main :: () {
 
     enable_long_form_struct_printing();
     print("%", ctx);
+}
+
+func_taking_a_callback :: (elems: []int, func: #type (int, user_data: *void), user_data: *void) {
+    for elems
+        if it % 2 == 0
+            func(it, user_data);
 }
 
 #scope_file
