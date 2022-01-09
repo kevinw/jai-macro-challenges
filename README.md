@@ -1,5 +1,7 @@
 # jai-macro-challenges
 
+![dotviz graph of Code_Nodes](graph.png)
+
 Some things I wish I had macros for sometimes.
 
 ## An aside
